@@ -6,5 +6,7 @@ function solution(numbers) {
     
     answer = nums.join("")
     
+    //return answer;
+    
     return answer[0]==='0'? '0' : answer;
 }
