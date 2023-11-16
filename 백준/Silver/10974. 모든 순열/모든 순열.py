@@ -2,20 +2,20 @@ N = int(input())
 
 nums = [(i) for i in range(N+1)]
 
-def dfs(n):     
+def dfs(n, depth):     
     visited.append(n)
-       
-    if(len(visited)) == N:
+    
+    if(depth) == N:
         print(* visited)
         return
 
-    for k in range(1,N+1):
-        if k not in visited:
-            dfs(k)
+    for num in range(1,N+1):
+        if num not in visited:
+            dfs(num, depth+1)
             visited.pop()
             
 for i in range(N):
     visited = []
-    dfs(i+1)
+    dfs(i+1, 1)
 # visited=[]
 # dfs(1)
